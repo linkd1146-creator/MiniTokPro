@@ -1,0 +1,251 @@
+<!doctype html>
+
+
+MiniTok 
+
+<style>
+body{margin:0;background:black;font-family:Arial;overflow:hidden;}
+.container{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;}
+.video{position:relative;height:100vh;scroll-snap-align:start;}
+iframe{width:100%;height:100%;border:none;}
+
+.overlay{
+position:absolute;bottom:100px;left:15px;color:white;
+}
+.title{font-size:18px;font-weight:bold;}
+
+.cart{
+position:absolute;bottom:0;width:100%;
+background:#ffcc00;padding:15px;text-align:center;
+}
+.cart a{color:black;font-weight:bold;text-decoration:none;}
+
+.side{
+position:absolute;right:10px;bottom:120px;color:white;text-align:center;
+}
+.icon{margin:15px 0;cursor:pointer;font-size:20px;}
+</style>
+
+<script async="async" data-cfasync="false"
+src="https://pl29287856.profitablecpmratenetwork.com/68c1976a6a89247b5122edd8438c60f4/invoke.js"></script>
+
+<div id="container-68c1976a6a89247b5122edd8438c60f4"></div>
+
+<div class="container" id="app"></div>
+let scrollCount = 0;
+
+function trackScrollAd(){
+
+  scrollCount++;
+
+  console.log("Scroll:", scrollCount);
+
+  if(scrollCount % 3 === 0){
+    showBannerAd();
+  }
+}
+window.addEventListener("scroll", () => {
+
+  let vh = window.innerHeight;
+
+  if(window.scrollY % vh === 0){
+    trackScrollAd();
+  }
+
+});
+function showBannerAd(){
+
+  let ad = document.createElement("div");
+
+  ad.innerHTML = `
+    <div style="
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:white;
+      z-index:9999;
+      text-align:center;
+      padding:10px;
+    ">
+      <div id="container-68c1976a6a89247b5122edd8438c60f4"></div>
+    </div>
+  `;
+
+  document.body.appendChild(ad);
+
+  // auto close after 8 sec
+  setTimeout(()=>{
+    ad.remove();
+  }, 8000);
+}
+
+<script type="module">
+
+// 🔥 API YOUTUBE
+const API_KEY = "AIzaSyDpN_GFfGfnjlR6irFPhpXmnCznqs4c4Z0";
+
+// 🔥 FIREBASE
+const firebaseConfig = {
+  apiKey: "AIzaSyDRbZaikbDC2GuWIfL7OWalXY81nvSd_DA",
+  authDomain: "minitok-bd7c1.firebaseapp.com",
+  projectId: "minitok-bd7c1",
+  storageBucket: "minitok-bd7c1.firebasestorage.app",
+  messagingSenderId: "507499794732",
+  appId: "1:507499794732:web:6f97c616d022e8beb79c89"
+};
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const appFirebase = initializeApp(firebaseConfig);
+const db = getFirestore(appFirebase);
+
+
+// 🔥 DATABASE TOKO (AMBIL DARI LIST KAMU)
+const toko = [
+{nama:"sp5home",link:"https://s.shopee.co.id/4fsj4TRNo6"},
+{nama:"Noren Tirai",link:"https://s.shopee.co.id/4qC9GmQkT9"},
+{nama:"LushMake",link:"https://s.shopee.co.id/30kV5PXjBo"},
+{nama:"CB Care Beauty Store",link:"https://s.shopee.co.id/2g7egnYzrm"},
+{nama:"PIXELPORTER",link:"https://s.shopee.co.id/30kV5xCdbT"},
+{nama:"Winter Angels",link:"https://s.shopee.co.id/7Aa434Hrjk"},
+{nama:"Melovey",link:"https://s.shopee.co.id/3VglgKVpB1"}
+];
+
+function randomToko(){
+ return toko[Math.floor(Math.random()*toko.length)];
+}
+
+
+// 🔥 LOAD VIDEO
+async function loadVideo(){
+
+let res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=viral indonesia&type=video&maxResults=10&key=${API_KEY}`);
+let data = await res.json();
+
+render(data.items);
+
+}
+
+
+// 🔥 RENDER
+function render(videos){
+
+const app = document.getElementById("app");
+
+videos.forEach((v,i)=>{
+
+let id = v.id.videoId;
+let t = randomToko();
+
+app.innerHTML += `
+<div class="video">
+
+<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0"></iframe>
+
+<div class="overlay">
+<div class="title">🔥 ${t.nama}</div>
+<div>Produk lagi viral! Klik sekarang 😱</div>
+</div>
+
+<div class="side">
+
+  <div class="icon" onclick="trackClick('like')">❤️</div>
+
+  <div class="icon" onclick="trackClick('comment')">💬</div>
+
+  <div class="icon" onclick="trackClick('share')">🔗</div>
+let clickCount = 0;
+let unlocked = false;
+
+const smartLink =
+"https://www.profitablecpmratenetwork.com/i5gzxdgr?key=72e84d2f8c4935bbf89be21a6ea02ff1";
+
+function trackClick(type){
+
+  if(unlocked){
+    window.location.href = smartLink;
+    return;
+  }
+
+  clickCount++;
+
+  console.log(type + " clicked | total: " + clickCount);
+
+  if(clickCount >= 3){
+    unlocked = true;
+
+    alert("🔥 Link terbuka!");
+
+    // auto redirect setelah unlock
+    setTimeout(()=>{
+      window.location.href = smartLink;
+    }, 300);
+  }
+}
+</div>
+
+<div class="cart">
+<a onclick="trackClick('${t.nama}','${t.link}')">
+🛒 BELI SEKARANG — DISKON TERBATAS!
+</a>
+</div>
+
+</div>
+`;
+
+});
+
+}
+
+
+// 🔥 INFINITE SCROLL
+window.addEventListener("scroll", () => {
+ if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
+  loadVideo();
+ }
+});
+
+
+// 🔥 TRACKING CUAN
+window.trackClick = async function(nama,link){
+
+await addDoc(collection(db,"click"), {
+ toko:nama,
+ link:link,
+ waktu:Date.now()
+});
+
+window.open(link,"_blank");
+
+}
+
+
+// 🔥 INTERAKSI
+window.like = async function(i){
+ await addDoc(collection(db,"like"), {video:i});
+ alert("❤️ Disukai");
+}
+
+window.comment = function(nama){
+ let isi = prompt("Komentar:");
+ if(isi){
+  addDoc(collection(db,"comment"), {produk:nama,text:isi});
+  alert("Komentar terkirim!");
+ }
+}
+
+window.share = function(link){
+ navigator.clipboard.writeText(link);
+ alert("Link disalin!");
+}
+
+
+// START
+loadVideo();
+
+</script>
+
+
+</!doctype>
