@@ -87,7 +87,7 @@ const API_KEY = "AIzaSyDpN_GFfGfnjlR6irFPhpXmnCznqs4c4Z0";
 
 // 🔥 FIREBASE
 const firebaseConfig = {
-  apiKey: "AIzaSyDRbZaikbDC2GuWIfL7OWalXY81nvSd_DA",
+  apiKey: "",
   authDomain: "minitok-bd7c1.firebaseapp.com",
   projectId: "minitok-bd7c1",
   storageBucket: "minitok-bd7c1.firebasestorage.app",
